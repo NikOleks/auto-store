@@ -6,5 +6,33 @@
             padding-top: 73px;
             padding-bottom: 76px;
         }
+        &__contact-block{
+            float: left;
+            display: inline-block;
+            width: 365px;
+            .contact-block{
+                &__title{
+                    color: @footer-heading-color;
+                    font-weight: 500;
+                    padding-bottom: 23px;
+                }
+                &__list__item{
+                    width: 100%;
+                    display: inline-block;
+                    padding-bottom: 35px;
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                    img{
+                        margin-right: 6px;
+                    }
+                    span{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
     }
 }
+

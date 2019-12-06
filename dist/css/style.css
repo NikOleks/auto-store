@@ -1,6 +1,10 @@
 @import "../../dist/css/reset.css";
 @import "../../dist/css/normalize.css";
 @import "../../dist/css/all.css";
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/");
+}
 * {
   margin: 0;
   padding: 0;
@@ -51,4 +55,29 @@ a.link {
 .footer__content-wrapper {
   padding-top: 73px;
   padding-bottom: 76px;
+}
+.footer__content__contact-block {
+  float: left;
+  display: inline-block;
+  width: 365px;
+}
+.footer__content__contact-block .contact-block__title {
+  color: #FFFFFF;
+  font-weight: 500;
+  padding-bottom: 23px;
+}
+.footer__content__contact-block .contact-block__list__item {
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 35px;
+}
+.footer__content__contact-block .contact-block__list__item:last-child {
+  padding-bottom: 0;
+}
+.footer__content__contact-block .contact-block__list__item img {
+  margin-right: 6px;
+}
+.footer__content__contact-block .contact-block__list__item span {
+  display: inline-block;
+  vertical-align: middle;
 }
