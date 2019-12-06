@@ -1,0 +1,89 @@
+.products__content{
+    width: 100%;
+    background-color: @main-background;
+}
+.filters{
+    float: left;
+    width: 25%;
+    padding-right: calc(90px/4);
+    display: inline-block;
+    box-sizing: border-box;
+    &-block{
+        box-sizing: border-box;
+        &__title{
+            color: @main-elements-color;
+            background-color: @main-elements-background;
+            padding: 14px 20px;
+            font-weight: 500;
+            border-radius: 5px 5px 0 0;
+            letter-spacing: 0.02em;
+        }
+        &__filter-group{
+            padding: 19px 0px 30px 21px;
+            border: 1px solid @main-border-line-color;
+            border-top: none;
+            &:first-of-type .filter-group__filter-items > ul {
+                font-size: 0;
+            }
+            .filter-group{
+                &__name{
+                    color: @main-heading-color;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    padding-bottom: 16px;
+                    letter-spacing: 0.02em;
+                }
+                &__filter-items.price-slider{
+                    height: 70px;
+                }
+                &__filter-items{
+                    .color-filter{
+                        .geometric-mixin(@width: 33px, @height: 33px);
+                        box-sizing: border-box;
+                        display: inline-block;
+                        border-radius: 3px;
+                        border: 1px solid @main-border-line-color;
+                        padding: 2px;
+                        margin-right: 3px;
+                        margin-bottom: 4px;
+                        &:nth-child(n+7){
+                            margin-bottom: 0;
+                        }
+                    }
+                    .brands-filter__wrapper{
+                        padding-top: 13px;
+                    }
+                    .brand-filter{
+                        padding-bottom: 16px;
+                        font-size: 13px;
+                        letter-spacing: 0.01em;
+                        &:last-child{
+                            padding-bottom: 0;
+                        }
+                    }
+                    .models-filter__wrapper{
+                        padding-top: 5px;
+                        padding-right: 12px;
+                        font-size: 0;
+                    }
+                    .model-filter{
+                        display: inline-block;
+                        font-size: 12px;
+                        letter-spacing: 0.02em;
+                        color: @product-filter-model-color;
+                        box-sizing: border-box;
+                        border: 1px solid @main-border-line-color;
+                        border-radius: 5px;
+                        padding: 9px;
+                        margin-right: 6px;
+                        margin-bottom: 6px;
+                        line-height: 14px;
+                        &:nth-child(n+7){
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
