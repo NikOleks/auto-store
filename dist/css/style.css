@@ -78,18 +78,33 @@ a.link {
   display: inline-block;
 }
 .product-item__content {
-  padding-top: 19px;
-  padding-bottom: 24px;
+  padding: 17px 0 30px;
   text-align: center;
+  letter-spacing: 0.02em;
+  border-top: 1px solid #E5E5E5;
 }
 .product-item__content__title {
+  display: inline-block;
   padding-bottom: 10px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.product-item__content__title:hover {
+  color: #FF2D37;
 }
 .product-item__content__prices {
   color: #282828;
   font-size: 18px;
   font-weight: 500;
   padding-top: 11px;
+}
+.product-item__content__prices .sale-price {
+  color: #FF2D37;
+  margin-right: 10px;
+}
+.product-item__content__prices .old-price {
+  color: #999999;
+  text-decoration: line-through;
 }
 .header__stretch {
   width: 100%;
@@ -417,7 +432,7 @@ a.link {
   color: #FFFFFF;
   background-color: #FF2D37;
 }
-.header__navigation .nav-menu__item :hover {
+.header__navigation .nav-menu__item:hover {
   color: #FFFFFF;
   background-color: #FF2D37;
 }
@@ -448,7 +463,6 @@ header::after {
   padding: 0 7px;
 }
 .product-info {
-  height: 1300px;
   display: inline-block;
   box-sizing: border-box;
 }
@@ -625,7 +639,7 @@ header::after {
   color: #FFFFFF;
   background-color: #282828;
 }
-.product-info__content .product__actions__add-btn :hover {
+.product-info__content .product__actions__add-btn:hover {
   color: #FFFFFF;
   background-color: #282828;
 }
@@ -652,8 +666,8 @@ header::after {
   color: #FFFFFF;
   background-color: #FF2D37;
 }
-.product-info__content .product__actions__addWish-btn :hover,
-.product-info__content .product__actions__compare-btn :hover {
+.product-info__content .product__actions__addWish-btn:hover,
+.product-info__content .product__actions__compare-btn:hover {
   color: #FFFFFF;
   background-color: #FF2D37;
 }
@@ -665,6 +679,61 @@ header::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.product-info__details-tabs {
+  padding: 70px 0 104px;
+  width: 100%;
+  height: 675px;
+  border: 1px solid #E5E5E5;
+}
+.products-related__heading {
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.products-related__heading p {
+  line-height: 23px;
+  color: #FF2D37;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+.products-related__heading__title {
+  display: inline-block;
+  font-size: 36px;
+  line-height: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+.products-related__heading__title::before,
+.products-related__heading__title::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #FF2D37;
+  border-radius: 50%;
+}
+.products-related__heading__title::before {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(0, -50%);
+}
+.products-related__heading__title::after {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translate(0, -50%);
+}
+.products-related__gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 30px;
+}
+.products-related__gallery__item {
+  box-sizing: border-box;
+  border: 1px solid #E5E5E5;
 }
 .float_right {
   float: right;
@@ -902,6 +971,7 @@ header::after {
 }
 .footer__content {
   width: 100%;
+  margin-top: 118px;
   background-color: #181818;
 }
 .footer__content-wrapper {

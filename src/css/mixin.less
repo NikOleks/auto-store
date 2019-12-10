@@ -45,9 +45,14 @@
     }
 }
 .hover-mixin(@page-hover-color;){
-    :hover{
+    &:hover{
         color: @main-elements-color;
         background-color: @page-hover-color;
+    }
+}
+.hover-text-mixin(){
+    &:hover{
+        color: @page-hover-color;
     }
 }
 .button-mixin(@width; @height; @background){
