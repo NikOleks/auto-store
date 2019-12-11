@@ -1,23 +1,11 @@
 @font-face {
-    font-family: 'Rubik';
-    src:url('../../dist/css/fonts/Rubik-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
+    .font-mixin(@fontFile: "Rubik-Regular.ttf", @weight: normal);
 }
 @font-face {
-    font-family: 'Rubik';
-    src: url("../../dist/css/fonts/Rubik-Medium.ttf") format('truetype');
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
+    .font-mixin(@fontFile: "Rubik-Medium.ttf", @weight: 500);
 }
 @font-face {
-    font-family: 'Rubik';
-    src: url("../../dist/css/fonts/Rubik-Bold.ttf") format('truetype');
-    font-style: normal;
-    font-weight: bold;
-    font-display: swap;
+    .font-mixin(@fontFile: "Rubik-Bold.ttf", @weight: bold);
 }
 *{
     margin: 0;
@@ -26,7 +14,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     font-size: @page-font-size;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     color: @page-main-color;
     font-weight: normal;
     position: relative;
@@ -61,6 +49,9 @@ h3 {
 a.link{
     color:inherit;
     text-decoration: none;
+    &:hover{
+        color: @page-hover-color;
+    }
 }
 .col-1{
     width: calc((100% - 3 * @padding-width) / 4);
@@ -73,4 +64,11 @@ a.link{
 .col-3{
     width: calc(((100% - 3 * @padding-width) / 4) * 3 + 2 * @padding-width);
     display: inline-block;
+}
+.button{
+    height: 40px;
+    display: inline-block;
+    border-radius: 5px;
+    color: @main-elements-color;
+    cursor: pointer;
 }
