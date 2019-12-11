@@ -393,6 +393,46 @@ a.link:hover {
   padding: 25px;
   z-index: 2;
 }
+.header__main .mini-cart__details {
+  position: relative;
+}
+.header__main .mini-cart__details > i {
+  font-size: 20px;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.header__main .mini-cart__details .mini-cart__image {
+  float: left;
+  margin-right: 12px;
+  width: 40%;
+  box-sizing: border-box;
+  border: 1px solid #E5E5E5;
+  position: relative;
+}
+.header__main .mini-cart__details .mini-cart__params {
+  float: right;
+  width: 56%;
+}
+.header__main .mini-cart__details .mini-cart__params #details:checked ~ i {
+  transform: rotate(180deg);
+}
+.header__main .mini-cart__details .mini-cart__title {
+  text-transform: uppercase;
+  line-height: 17px;
+  display: block;
+}
+.header__main .mini-cart__details .mini-cart__details-toggle {
+  display: block;
+  padding-bottom: 10px;
+}
+.header__main .mini-cart__details .mini-cart__details-name {
+  font-weight: bolder;
+  padding-right: 3px;
+  transform: translateY(100%);
+}
 .header__main .mini-cart__counter {
   display: flex;
   flex-direction: row;
