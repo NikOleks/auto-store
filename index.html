@@ -68,7 +68,7 @@
                     <i class="fas fa-search"></i>
                 </span>
             </div>
-            <div class="col-1 clearfix-block">
+            <div class="col-1 cart-block clearfix-block">
                 <div class="wish-list">
                     <i class="fas fa-heart"></i>
                 </div>
@@ -78,6 +78,33 @@
                         <span>$205.00</span>
                     </span>
                     <span class="cart__counter">1</span>
+                </div>
+                <div class="mini-cart">
+                    <div class="mini-cart__details">
+                        <div class="mini-cart__image"></div>
+                        <p class="mini-cart__title">Carbon Fiber Steering Wheel</p>
+                        <input type="checkbox" name="details" id="details">
+                        <label for="details" class="mini-cart__details-toggle">
+                            <span>See Details</span>
+                            <i class="fas fa-angle-down"></i>
+                        </label>
+                        <span class="mini-cart__details-name">Size</span><span>S</span>
+                        <span clas="mini-cart__details-name">Color</span><span>Blue</span>
+                    </div>
+                    <div class="mini-cart__counter">
+                        <span>Qty:</span>
+                        <input type="text" value="1">
+                        <span class="mini-cart__update-btn">Update</span>
+                        <span class="mini-cart__counter__sum">$205.00</span>
+                    </div>
+                    <div class="mini-cart__total clearfix-block">
+                        <span>cart subtotal:</span>
+                        <span>205.00</span>
+                    </div>
+                    <div class="mini-cart__buttons clearfix-block">
+                        <div class="mini-cart__view-btn">view cart</div>
+                        <div class="mini-cart__checkout-btn">checkout</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,7 +259,10 @@
                             </div>
                             <div class="product__actions__color-select">
                                 <p>Color<span>*</span></p>
-                                <input type="text" placeholder="-- Pleace Select --">
+                                <select placeholder="-- Pleace Select --">
+                                    <option></option>
+                                    <option></option>
+                                </select>
                             </div>
                             <div class="product__actions__buttons-wrapper">
                                 <div class="product__actions__quantity">
@@ -314,27 +344,6 @@
                 </div>
             </div>
         </div>
-        <!--<div class="mini-cart">
-            <div class="mini-cart__image"></div>
-            <p class="mini-cart__title">Carbon Fiber Steering Wheel</p>
-            <span>See Details</span>
-            <span>Size S</span>
-            <span>Color Blue</span>
-            <div class="mini-cart__count">
-                Qty:
-                <input type="text">
-            </div>
-            <div class="mini-cart__update-btn">Update</div>
-            <span>$205.00</span>
-            <div class="mini-cart__total">
-                cart subtotal:
-                <span>205.00</span>
-            </div>
-            <div class="mini-cart__view-btn">view cart</div>
-            <div class="mini-cart__checkout-btn">
-                checkout
-            </div>
-        </div>-->
     </div>
 </main>
 <footer>
@@ -432,9 +441,7 @@
     </div>
     <div class="footer__copyright clearfix-block">
         <div class="page-wrapper">
-            <a href="#" class="link footer__copyright__pay-system">
-
-        </a>
+            <a href="#" class="link footer__copyright__pay-system"></a>
             <div class="footer__copyright__content">
                 <span>SM Autostore © 2019 Demo Store.</span>
                 <span>All Rights Reserved.</span>
