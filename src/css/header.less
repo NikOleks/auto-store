@@ -455,6 +455,16 @@
             float: left;
             position: relative;
 
+            label{
+                cursor: pointer;
+                position: relative;
+            }
+            input[type="checkbox"]{
+                display: none;
+                &:checked ~ .categories__menu__list{
+                    display: block;
+                }
+            }
             &__item {
                 width: 100%;
                 color: @main-elements-color;
@@ -480,6 +490,30 @@
                 &::after {
                     .absolute-position-mixin(@left: 0, @top: 5px, @translateX: 0);
                 }
+            }
+            &__list{
+                display: none;
+                .absolute-position-mixin(@top: 100%, @left: 0, @translateX: 0, @translateY: 0);
+                width: 100%;
+                padding: 0 20px 10px;
+                z-index: 2;
+                border: 1px solid @main-border-line-color;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 10px @submenu-box-shadow;
+                background-color: @main-background;
+            }
+            &__category-title{
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 18px;
+                text-transform: uppercase;
+                padding-bottom: 10px;
+                padding-top: 26px;
+            }
+            &__category{
+                font-size: 12px;
+                line-height: 14px;
+                padding-bottom: 10px;
             }
         }
 

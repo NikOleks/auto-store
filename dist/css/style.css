@@ -639,6 +639,16 @@ a.link:hover {
   float: left;
   position: relative;
 }
+.header__navigation .categories__menu label {
+  cursor: pointer;
+  position: relative;
+}
+.header__navigation .categories__menu input[type="checkbox"] {
+  display: none;
+}
+.header__navigation .categories__menu input[type="checkbox"]:checked ~ .categories__menu__list {
+  display: block;
+}
 .header__navigation .categories__menu__item {
   width: 100%;
   color: #FFFFFF;
@@ -671,6 +681,33 @@ a.link:hover {
   top: 5px;
   left: 0;
   transform: translate(0, -50%);
+}
+.header__navigation .categories__menu__list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
+  padding: 0 20px 10px;
+  z-index: 2;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+}
+.header__navigation .categories__menu__category-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  padding-top: 26px;
+}
+.header__navigation .categories__menu__category {
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 10px;
 }
 .header__navigation .nav-menu {
   float: right;
