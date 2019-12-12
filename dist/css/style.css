@@ -380,7 +380,11 @@ a.link:hover {
 .header__main .cart:hover::after {
   background-color: #282828;
 }
+.header__main .cart:hover + .mini-cart {
+  display: block;
+}
 .header__main .mini-cart {
+  display: none;
   position: absolute;
   top: 100%;
   left: -84px;
@@ -393,40 +397,59 @@ a.link:hover {
   padding: 25px;
   z-index: 2;
 }
+.header__main .mini-cart:hover {
+  display: block;
+}
 .header__main .mini-cart__details {
   position: relative;
 }
 .header__main .mini-cart__details > i {
   font-size: 20px;
   position: absolute;
-  top: 100%;
-  left: 40%;
+  top: calc(100% - 3px);
+  left: 110px;
   transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
   cursor: pointer;
+}
+.header__main .mini-cart__details > i:hover {
+  color: #FF2D37;
 }
 .header__main .mini-cart__details .mini-cart__image {
   float: left;
-  margin-right: 12px;
-  width: 40%;
+  margin-right: 13px;
+  width: 113px;
   box-sizing: border-box;
   border: 1px solid #E5E5E5;
   position: relative;
 }
+.header__main .mini-cart__details .mini-cart__image img {
+  width: 100%;
+}
 .header__main .mini-cart__details .mini-cart__params {
   float: right;
-  width: 56%;
+  display: inline-block;
+  width: calc(100% - 126px);
 }
-.header__main .mini-cart__details .mini-cart__params #details:checked ~ i {
+.header__main .mini-cart__details .mini-cart__params input[type="checkbox"] {
+  display: none;
+}
+.header__main .mini-cart__details .mini-cart__params input[type="checkbox"]:checked ~ .mini-cart__details-toggle > i {
   transform: rotate(180deg);
+}
+.header__main .mini-cart__details .mini-cart__params input[type="checkbox"]:checked ~ .mini-cart__details-block {
+  visibility: visible;
 }
 .header__main .mini-cart__details .mini-cart__title {
   text-transform: uppercase;
-  line-height: 17px;
   display: block;
 }
 .header__main .mini-cart__details .mini-cart__details-toggle {
-  display: block;
-  padding-bottom: 10px;
+  display: inline-block;
+}
+.header__main .mini-cart__details .mini-cart__details-block {
+  display: inline-block;
+  visibility: hidden;
 }
 .header__main .mini-cart__details .mini-cart__details-name {
   font-weight: bolder;
@@ -437,9 +460,8 @@ a.link:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
   align-items: baseline;
-  padding: 20px 0;
+  padding: 22px 0 16px;
 }
 .header__main .mini-cart__counter span:first-child {
   font-size: 13px;
@@ -608,6 +630,7 @@ a.link:hover {
 }
 .header__navigation .nav-menu {
   float: right;
+  position: relative;
 }
 .header__navigation .nav-menu__item:hover {
   color: #FFFFFF;
@@ -621,6 +644,53 @@ a.link:hover {
 }
 .header__navigation .nav-menu__item:hover > a {
   color: #FFFFFF;
+}
+.header__navigation .nav-menu__item:first-child:hover ~ .submenu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.header__navigation .nav-menu .submenu-container {
+  display: none;
+  position: absolute;
+  top: calc(100% - 3px);
+  left: 0;
+  transform: translate(0, 0);
+  padding: 26px 20px 33px;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 2;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+}
+.header__navigation .nav-menu .submenu-container:hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.header__navigation .nav-menu .submenu-container .nav-links-menu {
+  width: calc((100% - 20px)/2);
+  display: inline-block;
+}
+.header__navigation .nav-menu .submenu-container .nav-links-menu__heading {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.header__navigation .nav-menu .submenu-container .nav-links-menu__item {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 9px;
+}
+.header__navigation .nav-menu .submenu-container .nav-links-menu:nth-child(n+3) {
+  padding-top: 25px;
 }
 header {
   position: relative;
