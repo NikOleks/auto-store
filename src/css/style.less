@@ -221,11 +221,7 @@
 
                 &__add-btn {
                     .button-mixin(@width: 210px, @height: 40px, @background: @main-elements-background);
-                    text-align: center;
-                    text-transform: uppercase;
-                    line-height: 40px;
                     .hover-mixin(@page-main-color;);
-
                 }
 
                 &__addWish-btn,
@@ -372,8 +368,7 @@
         }
 
         &__item {
-            display: inline-block;
-            .col-1-width();
+            width: calc((100% - 3 * @padding-width) / 4);
             @media(max-width: @laptop-small){
                 .col-1-width(@padding: @padding-width-small);
             }
@@ -389,13 +384,13 @@
     float: right;
 }
 
-.aside {
+.aside.float_right {
     @media(max-width: @laptop-small){
         float: none;
         .col-4-width();
     }
     .col-1-width();
-    &__heading {
+    .aside__heading {
         font-size: 17px;
         font-weight: bold;
         line-height: 20px;
@@ -528,7 +523,8 @@
         &-item{
             width: 100%;
             @media(max-width: @laptop-small){
-                .col-2-width();
+                display: block;
+                width: 50%;
                 margin: 10px auto;
             }
 
