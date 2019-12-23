@@ -238,6 +238,10 @@
             flex-grow: 1;
             .flex-mixin(@justify: flex-start);
 
+            &_btn.active-js{
+                background-color: @main-elements-background;
+                border-color: @main-elements-background;
+            }
             &_btn {
                 display: inline-block;
                 .geometric-mixin(@width: 33px, @height: 33px);
@@ -283,6 +287,12 @@
         }
     }
 
+    &__products.rowsView-js{
+        flex-direction: column;
+        .search-item{
+            width: 100%;
+        }
+    }
     &__products {
         .flex-mixin(@justify: space-between, @align: stretch);
         flex-wrap: wrap;
