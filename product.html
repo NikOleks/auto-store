@@ -5,12 +5,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AutoStore</title>
+    <link rel="stylesheet" href="dist/css/jquery-ui.css">
     <link rel="stylesheet" href="dist/css/style.css">
+    <script src="scripts/jquery-3.4.1.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script src="scripts/jquery-range-slider.js"></script>
 </head>
 <body>
 <header></header>
-<main class="products__content">
-    <div class="page-wrapper clearfix-block">
+<main>
+    <div class="page-wrapper products__content clearfix-block">
         <div class="aside float_left">
             <div class="filters-block">
                 <h2 class="filters-block__title">Shop By</h2>
@@ -51,12 +55,14 @@
                 <div class="filters-block__filter-group">
                     <div class="filter-group__name">price</div>
                     <div class="filter-group__filter-items price-slider__wrapper">
-                        <div class="price-slider__slider"></div>
+                        <div class="price-slider__slider">
+                            <div id="slider-range"></div>
+                        </div>
                         <div class="price-slider__controls">
                             <span>$</span>
-                            <input type="text" class="price-slider__controls__input price-min" value="66.9" />
+                            <input type="text" id="price-min" class="price-slider__controls__input price-min"/>
                             <span>-$</span>
-                            <input type="text" class="price-slider__controls__input price-max" value="290"/>
+                            <input type="text" id="price-max" class="price-slider__controls__input price-max"/>
                         </div>
                     </div>
                 </div>
@@ -172,37 +178,47 @@
         </div>
         <div class="search-result__wrapper search-block-js">
             <h1 class="search-result__heading">Baby Car Seats</h1>
-            <input type="radio" id="grid_view" name="view_toggle">
-            <input type="radio" id="rows_view" name="view_toggle">
             <div class="search-result__controls">
                 <div class="view__control">
-                    <label for="grid_view" class="view__control_btn gridView-toggle-js active-js">
-                        <a href="#" class="link view__control_icon">
-                            <img src="./dist/ima/table_view.svg" alt="">
+                    <div class="view__control_btn gridView-toggle-js active-js">
+                        <a href="#" class="view__control_icon">
+                            <svg width="19" height="14">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#table-view"></use>
+                            </svg>
                         </a>
-                    </label>
-                    <label for="rows_view" class="view__control_btn rowsView-toggle-js">
-                        <a href="#" class="link view__control_icon">
-                            <img src="./dist/ima/list_view.svg" alt="">
+                    </div>
+                    <div class="view__control_btn rowsView-toggle-js">
+                        <a href="#" class="view__control_icon">
+                            <svg width="19" height="14">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#list-view"></use>
+                            </svg>
                         </a>
-                    </label>
+                    </div>
                     <span>Items 1-15 of 18</span>
                 </div>
                 <div class="qty__control">
                     <label for="quantity">Show</label>
-                    <select id="quantity">
-                        <option value="15">15</option>
-                        <option value="10">10</option>
-                    </select>
+                    <div class="select-container">
+                        <select id="quantity">
+                            <option value="15">15</option>
+                            <option value="10">10</option>
+                        </select>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
                     <span>ptr page</span>
                 </div>
                 <div class="sort__control">
                     <label for="sort">Sort By</label>
-                    <select id="sort">
-                        <option value="position">Position</option>
-                        <option value="rating">Rating</option>
-                        <option value="price">Price</option>
-                    </select>
+                    <div class="select-container">
+                        <select id="sort">
+                            <option value="position">Position</option>
+                            <option value="rating">Rating</option>
+                            <option value="price">Price</option>
+                        </select>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
                     <a href="#" class="link"><i class="fas fa-long-arrow-alt-up"></i></a>
                 </div>
             </div>
@@ -707,6 +723,29 @@
     </div>
 </main>
 <footer></footer>
+<svg style="display: none">
+    <defs id="symbols">
+        <symbol viewBox="0 0 19 14" id="table-view">
+            <rect width="5" height="3" fill="currentColor"></rect>
+            <rect x="7" width="5" height="3" fill="currentColor"></rect>
+            <rect x="14" width="5" height="3" fill="currentColor"></rect>
+            <rect y="5" width="5" height="3" fill="currentColor"></rect>
+            <rect x="7" y="5" width="5" height="3" fill="currentColor"></rect>
+            <rect x="14" y="5" width="5" height="3" fill="currentColor"></rect>
+            <rect y="10" width="5" height="3" fill="currentColor"></rect>
+            <rect x="7" y="10" width="5" height="3" fill="currentColor"></rect>
+            <rect x="14" y="10" width="5" height="3" fill="currentColor"></rect>
+        </symbol>
+        <symbol viewBox="0 0 19 14" id="list-view">
+            <rect width="5" height="3" fill="currentColor"></rect>
+            <rect x="7" width="12" height="3" fill="currentColor"></rect>
+            <rect y="5" width="5" height="3" fill="currentColor"></rect>
+            <rect x="7" y="5" width="12" height="3" fill="currentColor"></rect>
+            <rect y="10" width="5" height="3" fill="currentColor"></rect>
+            <rect x="7" y="10" width="12" height="3" fill="currentColor"></rect>
+        </symbol>
+    </defs>`
+</svg>
 <script src="./scripts/script.js"></script>
 </body>
 </html>
