@@ -27,29 +27,29 @@ var service = {
     getFullMonth: function (numberOfMonth) {
         switch (+numberOfMonth + 1) {
             case 1:
-                return "января";
+                return "January";
             case 2:
-                return 'февраля';
+                return 'February';
             case 3:
-                return 'марта';
+                return 'March';
             case 4:
-                return 'апреля';
+                return 'April';
             case 5:
-                return 'мая';
+                return 'May';
             case 6:
-                return 'июня';
+                return 'June';
             case 7:
-                return 'июля';
+                return 'July';
             case 8:
-                return 'августа';
+                return 'August';
             case 9:
-                return 'сентября';
+                return 'September';
             case 10:
-                return 'октября';
+                return 'October';
             case 11:
-                return 'ноября';
+                return 'November';
             case 12:
-                return 'декабря';
+                return 'December';
         }
     },
     getCurrentDate: function () {
@@ -58,9 +58,10 @@ var service = {
     },
     createRatingStars: function (rating) {
         var wrap = [], classes;
+        var star_icon = this.createElement("i", "fas, fa-star");
         for (var i = 0; i < 5; i++){
             classes = (i < rating) ? "star-js, active-star" : "star-js";
-            wrap[i] = this.createSVG("#rating-star", 14, 14, classes);
+            wrap[i] = this.createElement("span", classes, [star_icon]);
         }
         return wrap;
     },
