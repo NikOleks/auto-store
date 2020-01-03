@@ -17,13 +17,6 @@ var service = {
         }
         return element;
     },
-    createSVG: function (idSVG, widthSVG, heightSVG, classes = "") {
-        var use =
-                this.createElement("use", undefined, undefined, undefined, {"xlink:href": idSVG}),
-            svg =
-                this.createElement("svg", classes, [use], undefined, {width: widthSVG, height: heightSVG});
-        return svg;
-    },
     getFullMonth: function (numberOfMonth) {
         switch (+numberOfMonth + 1) {
             case 1:

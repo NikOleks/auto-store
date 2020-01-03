@@ -1521,73 +1521,6 @@ a.link:hover {
   box-sizing: border-box;
   width: calc(((100% - 3 * 30px) / 4) * 3 + 2 * 30px);
   display: inline-block;
-  /*&__details-tabs {
-        width: 100%;
-        min-height: 675px;
-        margin-top: 70px;
-        margin-bottom: 100px;
-        position: relative;
-        .details-tab{
-            .flex-mixin(@justify: flex-start, @align: flex-start);
-            box-sizing: border-box;
-            &:first-child > .details-tab__heading{
-                border-top: 1px solid @main-border-line-color;
-            }
-
-            input[type="radio"]{
-                display: none;
-            }
-
-            input[type="radio"]:checked {
-                & ~ .details-tab__heading {
-                    width: 201px;
-                    &::before {
-                        content: '';
-                        .absolute-position-mixin(@top: 0, @left: 0, @translateX: 0, @translateY: 0);
-                        .geometric-mixin(@width: 4px, @height: 100%);
-                        background-color: @page-hover-color;
-                    }
-                }
-                & ~ .details-tab__content{
-                    display: inline-block;
-                }
-            }
-
-            &__heading{
-                font-size: @h2-font-size;
-                font-weight: bold;
-                text-transform: uppercase;
-                line-height: 21px;
-                cursor: pointer;
-                .hover-text-mixin();
-                width: 200px;
-                position: relative;
-                border-bottom: 1px solid @main-border-line-color;
-                border-left: 1px solid @main-border-line-color;
-                box-sizing: border-box;
-                padding: 20px 0 20px 30px;
-                z-index: 1;
-                background-color: @main-background;
-            }
-
-            &__content{
-                display: none;
-                min-height: 100%;
-                .absolute-position-mixin(@top: 0, @left: 0, @translateX: 0, @translateY: 0);
-                box-sizing: border-box;
-                margin-left: 200px;
-                border: 1px solid @main-border-line-color;
-                padding: 31px 20px 20px 31px;
-                line-height: 23px;
-                p{
-                    margin: 40px 0;
-                    &:first-child{
-                        margin-top: 0;
-                    }
-                }
-            }
-        }
-    }*/
 }
 @media (max-width: 992px) {
   .product-info {
@@ -1972,6 +1905,9 @@ a.link:hover {
     width: 100%;
     font-size: smaller;
   }
+}
+.product-info__details-tabs input[type="radio"] {
+  display: none;
 }
 .product-info__details-tabs #tab1:checked ~ .tab1-title::before,
 .product-info__details-tabs #tab2:checked ~ .tab2-title::before,

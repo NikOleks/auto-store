@@ -3,7 +3,6 @@
         buttonSubmit = formReview.querySelector(".submitReviewBtn-js");
 
     buttonSubmit.addEventListener("click", validateForm);
-    //formRespond.addEventListener("submit", addRespond);
 
     function validateForm(e) {
         e.preventDefault();
@@ -11,11 +10,11 @@
         else{
             alert("error");
         }
-    }
+    };
 
     function isEmptyField(field) {
         return field.value.trim();
-    }
+    };
 
     function addReview() {
         var container = document.querySelector(".reviews-wrapper-js"),
@@ -30,7 +29,7 @@
         }
         getReviewsCount();
         clearFormReview();
-    }
+    };
 
     function getTreeObject() {
         var comment =
@@ -68,7 +67,6 @@
 
         if (formReview.ratingStar.value){
             likes.children = service.createRatingStars(+formReview.ratingStar.value).concat(percentCounter);
-                //createRatingStars(+formRespond.ratingStar.value).concat(percentCounter);
         }
         if (formReview.advantages.value.trim()) {
             var textElement =
@@ -89,6 +87,6 @@
             respondText.children.push(container);
         }
         return root;
-    }
+    };
     window.elementNode = Node;
 })();

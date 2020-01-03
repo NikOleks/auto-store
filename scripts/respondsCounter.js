@@ -4,32 +4,23 @@
         cancelReview = formReview.querySelector(".cancelReviewBtn-js"),
         reviewCounters = document.querySelectorAll(".reviewCounter-js"),
         reviews = tabReview.querySelectorAll(".review-js");
-        //openFormBtn = document.querySelector(".openFormBtn-js"),
-        //pageOverlay = document.querySelector(".page-overlay"),
-        //tabContainer = document.querySelector(".product__tabs-container"),
-
-
-    /*openFormBtn.addEventListener('click', function () {
-        pageOverlay.classList.add("show");
-    });*/
 
     cancelReview.addEventListener("click", clearForm);
 
     function clearForm() {
-        //pageOverlay.classList.remove("show");
         service.clearFormFields(formReview);
-    }
+    };
 
     function getReviewsCount() {
         for (var i = 0; i < reviewCounters.length; i++) {
             reviewCounters[i].innerHTML = document.querySelectorAll(".review-js").length;
         }
-    }
+    };
 
     var counters = [];
     for (var i = 0; i < reviews.length; i++) {
         counters[i] = getCounter(reviews[i]);
-    }
+    };
 
     function getCounter(review) {
         var counter = new VoteCounter(
@@ -42,7 +33,7 @@
         positiveVoteBtn.addEventListener("click", counter.setPositiveVote.bind(counter));
         negativeVoteBtn.addEventListener("click", counter.setNegativeVote.bind(counter));
         return counter;
-    }
+    };
 
     getReviewsCount();
     window.getReviewsCount = getReviewsCount;
