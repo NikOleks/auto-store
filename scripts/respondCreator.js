@@ -6,6 +6,7 @@
 
     function validateForm(e) {
         e.preventDefault();
+        checkRequired(formReview);
         if (true) addReview();
         else{
             alert("error");
