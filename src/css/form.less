@@ -1,9 +1,10 @@
-.form-wrapper{
+.form-wrapper {
     border: 1px solid @main-border-line-color;
     border-radius: 8px;
     margin: 0 auto;
 }
-.form-review{
+
+.form-review {
     &__stars-rating__wrapper {
         .flex-mixin(@justify: space-around);
         transform: rotate(180deg);
@@ -52,15 +53,17 @@
         }
     }
 
-    &__content{
+    &__content {
         padding: 10px;
     }
-    &__label{
+
+    &__label {
         display: inline-block;
         margin-bottom: 6px;
 
     }
-    &__input{
+
+    &__input {
         display: block;
         margin-bottom: 15px;
         width: 100%;
@@ -71,23 +74,32 @@
         resize: none;
         transition: border-color .2s ease;
         box-sizing: border-box;
-        &:focus{
+
+        &:focus {
             border-color: @form-review-rating-star-text-color-hover;
         }
     }
-    .textarea{
+
+    .textarea {
         height: 100px;
     }
-    &__submit{
+
+    &__submit {
         float: right;
         width: 40%;
         padding: 10px 0;
         margin-bottom: 10px;
     }
-    &__cancel{
+
+    &__cancel {
         float: left;
         width: 40%;
         padding: 10px 0;
         margin-bottom: 10px;
+    }
+
+    .status_required {
+        color: @main-elements-background;
+        padding: 0 3px;
     }
 }

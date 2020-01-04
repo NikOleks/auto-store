@@ -507,6 +507,10 @@ a.link:hover {
   padding: 10px 0;
   margin-bottom: 10px;
 }
+.form-review .status_required {
+  color: #FF2D37;
+  padding: 0 3px;
+}
 .responds-content {
   margin-top: 20px;
 }
